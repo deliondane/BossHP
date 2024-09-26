@@ -1,7 +1,14 @@
+@font-face {
+  font-family: 'Helvetica 86 Heavy Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica 86 Heavy Italic'), url('HelveticaNeue-HeavyItalic.woff') format('woff');
+  }
 :root{
   --bg-b-color: #100A14;
+  --bg-w-color: #f0f0f0;
+  --accent-color: #E5A9FF;
   --text-w-color: ;
-
 
   --font-title: ;
 }
@@ -13,23 +20,59 @@ a{text-decoration: none; color: inherit;}
 #main{
   width: 1920px;
   height: auto;
+  margin: auto;
+  background-color: var(--bg-w-color);
   font-family: 'Inter';
 }
 
 header{
-  width: 100%;
+  width: 60%;
   height: 67px;
   margin: auto;
-  background-color: var(--bg-b-color);
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 25px;
 }
-.icon{
+header .sidelist ul{
+  display: none;
+}
+header .icon{
   display: flex;
+}
+header .icon li{
+  margin-right: 20px;
 }
 
+.list{
+  margin: 0 auto;
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+}
+.list li{
+  padding: 5px 15px;
+}
+.list li:hover{
+  background-color: #100A14;
+  color: #f0f0f0;
+  border-radius: 50px;
+}
 
 .bg{
-  background-image: url(../img/background.png);
-  background: url(../img/background.png) cover center;
+  width: 60%;
+  height: 1068px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg h1{
+  font-family:'Helvetica 86 Heavy Italic';
+  position: absolute;
+
+}
+.bg button{
+  position: absolute;
 }
