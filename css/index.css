@@ -1,0 +1,53 @@
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+#total{
+  width: 100%;
+}
+
+.header{
+  width: 100%;
+  background-color: #181818;
+}
+.header .top{
+  width: 100%;
+}
+.header nav.top{
+  padding: 0 25px;
+  width: 100%;
+  height: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*좌측 토글(nav) 버튼*/
+header .top .menu-toggle-btn{
+  display: block;
+  width: 25px;
+  height: 26px;
+}
+header .top .menu-toggle-btn > span{
+  display: block;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #F8F9FB;
+}
+header .top .menu-toggle-btn > span:nth-child(2){
+  margin: 6px 0;
+}
+
+/*로고*/
+header .top .logo{
+  display: flex;
+  justify-content: center;
+}
+header .top .logo img{
+  width: 188px;
+}
+
+/*상단 바 버튼*/
+header .top .menu-btn{
+  display: flex;
+}
