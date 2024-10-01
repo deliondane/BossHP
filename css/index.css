@@ -1,4 +1,5 @@
-*{margin: 0; padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: "Montserrat","Noto Sans KR";}
 ul,li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 
@@ -24,8 +25,9 @@ a{text-decoration: none; color: inherit;}
 
 /*좌측 토글(nav) 버튼*/
 header .top .menu-toggle-btn{
+  cursor: pointer;
   display: block;
-  width: 25px;
+  width: 23px;
   height: 26px;
 }
 header .top .menu-toggle-btn > span{
@@ -42,12 +44,151 @@ header .top .menu-toggle-btn > span:nth-child(2){
 header .top .logo{
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 header .top .logo img{
-  width: 188px;
+  width: 170px;
 }
 
-/*상단 바 버튼*/
+/*상단 바 우측 버튼*/
 header .top .menu-btn{
   display: flex;
+  color: #F8F9FB;
+  cursor: pointer;
 }
+header .top .menu-btn li{
+  padding-left: 10px;
+}
+
+/*nav하단 bar*/
+#total .bottom{
+  margin: 0 auto;
+  width: 40%;
+  height: 43px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+#total .bottom a{
+  padding: 0 10px;
+}
+#total .bottom a:hover{
+  color: #999;
+}
+
+.main{
+  width: 100%;
+  height: 60rem;
+  background-image: url(https://cdn.imweb.me/thumbnail/20240930/2a3226ee1b2f2.jpg);
+  /* background-image: url(https://cdn.imweb.me/thumbnail/20230922/a2487574e834d.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.main .main_txt{
+  width: 60%;
+  height: 20rem;
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  color: #fff;
+}
+.main .main_txt p{
+  font-size: 18px;
+  font-weight: 400;
+}
+.main .main_txt h1{
+  font-size: 36px;
+  font-weight: 800;
+  padding: 5px 0;
+}
+.main .main_txt h3{
+  font-size: 30px;
+  font-weight: 400;
+}
+.main .main_txt button{
+  border: 1px solid #fff;
+  padding: 14px 55px;
+  background-color: transparent;
+  color: #fff;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all .3s;
+}
+.main .main_txt button:hover{
+  background-color: #fff;
+  color: #999;
+}
+
+/*왜 BOSE온라인 스토어에서 구매?*/
+#mid_info_bar{
+  width: 100%;
+  height: 15rem;
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mid_info_bar .mid_info_box{
+  width: 1310px;
+  height: 139.965px;
+  display: flex;
+  justify-content: space-around;
+}
+#mid_info_bar .mid_info{
+  width: 18.6rem;
+  height: 8rem;
+  padding: 22px 15px;
+}
+#mid_info_bar .mid_info h3{
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+}
+#mid_info_bar .info{
+  /* width: 297.5px;
+  height: 139.97px; */
+  width: 18.6rem;
+  height: 8rem;
+  padding: 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #737882;
+  border-radius: 25px;
+  border: transparent;
+  text-align: left;
+}
+#mid_info_bar .info_left{
+  color: rgb(255,255,255);
+  line-height: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#mid_info_bar .info_left h5{
+  font-size: 18px;
+  font-weight: 300;
+}
+#mid_info_bar .info_left span{
+  font-size: 14px;
+}
+#mid_info_bar .info_right{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+/*여기서부터 다시 시작*/
+#mic_info_bar .info_right .material-symbols-outlined{
+  /*아이콘 변경 후 사이즈 재조정*/
+}
+
+
