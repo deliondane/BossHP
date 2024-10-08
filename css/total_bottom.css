@@ -1,0 +1,91 @@
+/* nav하단 bar */
+#total ul#bottom{
+  width: 962.5px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  color: #F8F9FB;
+}
+#total ul#bottom > li{
+  width: 120px;
+  height: 46px;
+  position: relative;
+  text-align: center;
+}
+#total ul#bottom > li a{
+  display: inline-block;
+  width: 120px;
+  height: 100%;
+  max-height: 0;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+}
+#total ul#bottom a:hover{
+  color: #999;
+}
+#total ul#bottom ul.dropdown li{
+  width: 120px;
+  text-align: center;
+  padding: 5px;
+}
+#total ul#bottom ul.dropdown li a{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  line-height: 14px;
+}
+
+/*다운nav*/
+#total ul#bottom li ul.dropdown{
+  position: absolute;
+  transition: max-height .1s;
+  max-height: 0px;
+  overflow: hidden;
+  z-index: 1; 
+}
+#total ul#bottom li ul.dropdown li:hover{
+  background-color: #F8F9FB;
+  color: #181818;
+}
+#total ul#bottom li ul.dropdown li:hover a{
+  color: #181818;
+}
+
+/* #total #bottom{
+  margin: 0 auto;
+  width: 40%;
+  height: 43px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+#total #bottom a{
+  padding: 10px;
+  display: block;
+}
+#total #bottom a:hover{
+  color: #999;
+} */
+/*다운nav*/
+/* #total #bottom{
+  position: relative;
+}
+.dropdown{
+  position: absolute;
+  padding: 10px 0;
+  background-color: #F8F9FB;
+  max-height: 0px;
+  transition: max-height .5s;
+  overflow: hidden;
+}
+.dropdown li a {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  color: #181818;
+  display: block;
+} */

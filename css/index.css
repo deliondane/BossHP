@@ -61,77 +61,73 @@ header .top .menu-btn li{
 }
 
 /* nav하단 bar */
-#total ul#bottom{
-  width: 45%;
+#total ul#bottom {
+  width: 962.5px;
   margin: auto;
   display: flex;
   justify-content: space-around;
   color: #F8F9FB;
 }
-#total ul#bottom > li{
-  width: 100%;
+
+#total ul#bottom > li {
+  width: 120px;
   height: 46px;
   position: relative;
+  text-align: center;
 }
-#total ul#bottom > li a{
-  display: block;
+
+#total ul#bottom > li a {
+  display: inline-block;
   width: 100%;
   height: 100%;
+  padding: 10px 0;
   text-align: center;
   font-size: 14px;
-  padding: 10px 0;
+  transition: color 0.3s;
 }
-#total ul#bottom a:hover{
+
+#total ul#bottom > li > a:hover{
   color: #999;
 }
 
-/*다운nav*/
-#total ul#bottom li ul.dropdown{
+#total ul#bottom ul.dropdown {
   position: absolute;
-  transition: max-height .5s;
-  max-height: 0px;
+  max-height: 0;
   overflow: hidden;
+  z-index: 1;
 }
-#total ul#bottom li ul.dropdown a:hover{
-  background-color: #F8F9FB;
+#total ul#bottom ul.dropdown li{
+  width: 120px;
+  height: auto;
+  text-align: center;
+}
+#total ul#bottom ul.dropdown li a{
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
-/* #total #bottom{
-  margin: 0 auto;
-  width: 40%;
-  height: 43px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 12px;
-  color: #e5e7eb;
-  cursor: pointer;
-}
-#total #bottom a{
-  padding: 10px;
-  display: block;
-}
-#total #bottom a:hover{
-  color: #999;
-} */
-/*다운nav*/
-/* #total #bottom{
-  position: relative;
-}
-.dropdown{
-  position: absolute;
-  padding: 10px 0;
-  background-color: #F8F9FB;
-  max-height: 0px;
-  transition: max-height .5s;
-  overflow: hidden;
-}
-.dropdown li a {
-  margin-bottom: 10px;
-  padding: 10px 15px;
+#total ul#bottom li:hover ul.dropdown {
+  max-height: 500px;
+  transition: max-height .5s ease;
+  background-color: #fff;
   color: #181818;
-  display: block;
-} */
+}
+
+#total ul#bottom ul.dropdown li {
+  text-align: center;
+  padding: 5px; /* padding으로 통일성 유지 */
+}
+
+#total ul#bottom ul.dropdown li a {
+  display: block; /* inline-block 대신 block 사용 */
+  line-height: 14px;
+}
+
+#total ul#bottom ul.dropdown li:hover{
+  background-color: #181818;
+  color: #F8F9FB;
+}
 
 
 
@@ -250,6 +246,69 @@ header .top .menu-btn li{
   /*아이콘 변경 후 사이즈 재조정*/
   font-size: 50px;
 }
+
+#second_info{
+  width: 100%;
+  height: 40rem;
+  background-image: url(https://cdn.imweb.me/thumbnail/20240625/9869ccb2941a2.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: background-image 0.5s ease; /* 배경 이미지 변경 시 애니메이션 효과 */
+}
+#sec_info_txt{
+  width: 60%;
+  height: 20rem;
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  color: #fff;
+}
+#sec_info_txt h1.second_info_title{
+  font-size: 36px;
+  font-weight: 800;
+  padding: 10px 0;
+}
+#sec_info_txt h3{
+  font-size:20px;
+  font-weight: 400;
+}
+#sec_info_txt button{
+  border: 1px solid #fff;
+  padding: 14px 55px;
+  background-color: transparent;
+  color: #fff;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all .3s;
+}
+#sec_info_txt button:hover{
+  background-color: #fff;
+  color: #999;
+}
+
+#second_info .dot{
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+.dot > li{
+  width: .5rem;
+  height: .5rem;
+  background-color: #737882;
+  border-radius: 50%;
+  margin: .3rem;
+  cursor: pointer;
+}
+/*하이라이트 효과*/
+.dot > li.on,
+.dot > li:hover{
+  background-color:#fff;
+}
+
 
 
 
@@ -410,7 +469,7 @@ header .top .menu-btn li{
 .main2{
   width: 100%;
   height: 60rem;
-  background-image: url(https://cdn.imweb.me/thumbnail/20230922/a2487574e834d.png);
+  background-image: url(https://cdn.imweb.me/thumbnail/20240223/de8ecf78ff7e0.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
