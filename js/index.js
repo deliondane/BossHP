@@ -35,10 +35,7 @@ dot.forEach(item => {
         const newSrc = item.getAttribute('data-src');
         const newTitle = item.getAttribute('data-title');
         const newSubTitle = item.getAttribute('data-subtitle');
-
-        // 배경 이미지 변경 전, 이동 효과 추가
-        secondInfo.style.transform = 'translateX(100%)'; // 오른쪽으로 이동
-
+        
         // 잠시 대기 후 배경 이미지 변경
         setTimeout(() => {
             secondInfo.style.backgroundImage = `url(${newSrc})`;
