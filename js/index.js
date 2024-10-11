@@ -24,6 +24,7 @@ dotOnList.forEach(item => item.addEventListener('click',(e)=>{
   item.classList.add('on');
 }))
 
+/*
 //second_info
 const dot = document.querySelectorAll('.dot > li');
 const title = document.querySelector('#sec_info_txt h1'); 
@@ -46,6 +47,56 @@ dot.forEach(item => {
             // 현재 선택된 점 표시
             dot.forEach(dotItem => dotItem.classList.remove('on'));
             item.classList.add('on');
-        }, 500); // 이동 애니메이션과 일치하도록 500ms 대기
+        }, 500);
     });
 });
+*/
+
+const sliderWrap = document.querySelector('.slider_wrap');
+const sliderImg = sliderWrap.querySelector('.slider_img');
+const sliderInner = sliderWrap.querySelector('.slider_inner');
+const slider = sliderWrap.querySelectorAll('.slider');
+const sliderDot = sliderWrap.querySelector('.slider_dot');
+const sliderBtn = sliderWrap.querySelectorAll('.slider_btn a');
+
+let currentIndex = 0; //현재 보이는 이미지
+let sliderCount = slider.length; //이미지 갯수
+let sliderWidth = slider[0].offsetWidth; //이미지가로값
+let sliderInterval = 1000; //이미지 변경 시간
+let dotIndex = '';
+
+function init(){
+  //이미지 갯수만큼 닷 메뉴 생성
+  slider.forEach(()=>{
+    dotIndex += `<a href="#" class="dot"></a>`;
+  })
+    sliderDot.innerHTML = dotIndex;
+
+  //첫번째 닷 메뉴에 활성화 표시
+  sliderDot.firstChild.classList.add("active");
+}
+init();
+
+function gotoSlider(num){
+  sliderInner.style.transition = "all 400ms"
+  sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)"
+  currentIndex = num;
+
+  let dotActive = document.querySelectorAll(".slider_dot .dot")
+  dotActive.forEach((active)=>active.classList.remove("active"));
+  dotActive[num].classList.add("active")
+}
+
+//버튼을 클릭했을 때
+sliderBtn.forEach((btn, index)=>{
+  btn.addEventListener("click",()=>{
+      let prevIndex = (currentIndex + sliderCount-1) % sliderCount
+      let nextIndex = (currentIndex + 1) % sliderCount
+
+      if(btn.classList.contains("prev")){
+          gotoSlider(prevIndex)
+      } else {
+          gotoSlider(nextIndex)
+      }
+  })
+})

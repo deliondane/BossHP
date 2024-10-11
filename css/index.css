@@ -247,6 +247,74 @@ header .top .menu-btn li{
   font-size: 50px;
 }
 
+.slider_wrap{
+  width: 100%;
+  height: 45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.slider_img{
+  width: 100%;
+  height: 45rem;
+  overflow: hidden;
+}
+.slider_inner{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 45rem;
+}
+.slider{
+  width: 100%;
+  height: 45rem;
+}
+.slider img{
+  width: 100%;
+  height: 45rem;
+  object-fit: cover;
+  object-position: center bottom;
+}
+/*
+.slider_btn a{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-5%);
+  height: 45rem;
+  width: 20%; 
+  background-color: transparent;
+}
+.slider_btn a.prev{
+  left: 0;
+}
+.slider_btn a.next{
+  right: 0;
+}
+*/
+.slider_dot{
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  transform: translateX(-50%);
+  justify-content: center;
+}
+.slider_dot .dot {
+  width: .5rem;
+  height: .5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  border-radius: 50%;
+  transition: all 0.3s;
+  margin: .3rem;
+}
+.slider_dot .dot.active {
+  background-color: #fff;
+}
+/*
 #second_info{
   width: 100%;
   height: 45rem;
@@ -255,8 +323,8 @@ header .top .menu-btn li{
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  transform: background-image 0.5s ease; /* 배경 이미지 변경 시 애니메이션 효과 */
-}
+  transform: background-image 0.5s ease; 
+
 #sec_info_txt{
   width: 60%;
   height: 20rem;
@@ -303,12 +371,11 @@ header .top .menu-btn li{
   margin: .3rem;
   cursor: pointer;
 }
-/*하이라이트 효과*/
 .dot > li.on,
 .dot > li:hover{
   background-color:#fff;
 }
-
+*/
 
 
 
@@ -429,6 +496,7 @@ header .top .menu-btn li{
   height: 2rem;
   display: flex;
   justify-content: center;
+  transform: all .1s ease;
 }
 #new_product ul.product_dot li{
   width: .5rem;
@@ -514,7 +582,6 @@ header .top .menu-btn li{
 /*footer*/
 #footer{
   width: 100%;
-  padding: 50px 20%;
   box-sizing: border-box;
   background-color: #181818;
   color: #fff;
@@ -523,6 +590,7 @@ header .top .menu-btn li{
   align-items: center;
 }
 #footer .footer_top{
+  padding: 50px 20%;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -556,10 +624,60 @@ header .top .menu-btn li{
   padding: 5px 0;
 }
 
+
 #footer .footer_mid{
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   background-color: #282828;
+  padding: 0 20%;
+  display: flex;
+  align-items: center;
+}
+#footer .footer_mid ul{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#footer .footer_mid ul li{
+  padding: 0 10px;
+}
+
+
+.footer_bottom{
+  width: 100%;
+  padding: 50px 20%;
+  display: flex;
+  align-items: center;
+}
+.footer_bottom .fb_logo{
+  width: 20%;
+  margin: 0 6rem 0 4rem;
+}
+.footer_bottom .fb_logo img{
+  display: inline-block;
+  width: 90%;
+}
+.footer_bottom .text_table{
+  width: 80%;
+}
+.footer_bottom .text_table p.firstp span{
+  height: 1px;
+  width: 100%;
+  display: inline-block;
+  background-color: #fff;
+}
+.footer_bottom .text_table .innerdiv{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_bottom .text_table .innerdiv .rightp{
+  display: flex;
+}
+.footer_bottom .text_table .innerdiv .rightp p{
+  display: inline-block;
+  margin: 0 1px;
+  line-height: 25px;
 }
 
 
