@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box
+    }
+
+    /* Slideshow container */
+    #second_info {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    #second_info_txt {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .5
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Slideshow container -->
+  <div id="second_info">
+
+    <!-- 숫자와 캡션 텍스트가 포함된 전체 너비 이미지 -->
+    <div id="second_info_txt fade">
+      <img src="img/Artboard 1.png" style="width:100%">
+    </div>
+
+    <div id="second_info_txt fade">
+      <img src="img/Artboard 2.png" style="width:100%">
+    </div>
+
+    <div id="second_info_txt fade">
+      <img src="img/Artboard 3.png" style="width:100%">
+    </div>
+
+    <div id="second_info_txt fade">
+      <img src="img/Artboard 4.png" style="width:100%">
+    </div>
+
+    <div id="second_info_txt fade">
+      <img src="img/Artboard 5.png" style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+  <br>
+  <!-- 닷 버튼 -->
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1; //현재 표시되는 슬라이드 순번
+    //처음 페이지가 로드될 때 showSlides함수를 호출하여 첫 번째 슬라이드를 표시
+    showSlides(slideIndex);
+
+    //이전 다음 버튼 이벤트 리스너
+    document.querySelector(".prev").addEventListener("click",()=>showSlides(slideIndex -= 1)); 
+    //showSlides(slideIndex -= 1)함수를 호출하여 slideIndex값에서 1을 빼서 전달
+    document.querySelector(".next").addEventListener("click",()=> showSlides(slideIndex += 1)); 
+    //showSlides(slideIndex += 1)함수를 호출하여 slideIndex값에서 1을 더해서 전달
+
+    //dot버튼에 이벤트 리스너
+    const dots = document.querySelectorAll(".dot");
+    dots.forEach((dot, idx)=>dot.addEventListener("click",()=>{
+      showSlides(slideIndex = idx +1) //클릭한 닷버튼의 index값에서 1을 더한 값을 slideIndex에 할당한 후 showSlides의 인자로 전달
+    }))
+    
+    //닷버튼과 화살표 버튼을 눌렀을 때 실행될 함수
+    function showSlides(n){
+      //슬라이드이미지 아이템
+      const slides = document.querySelectorAll("#second_info_txt");
+      //닷버튼 선택
+      const dots = document.querySelectorAll(".dot");
+
+      if(n < 1) slideIndex = slides.length;
+      if(n > slides.length) slideIndex = 1;
+
+      slides.forEach(slide => {
+        slide.style.display = 'none';
+      })
+      dots.forEach(dot => {
+        dot.classList.remove("active");
+      })
+      //slidesIndex-1번째의 슬라이드를 화면에 표시하고 같은 순번의 dot버튼 활성화
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active");
+
+    }
+
+  </script>
+</body>
+</html>

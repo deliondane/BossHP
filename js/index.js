@@ -24,7 +24,6 @@ dotOnList.forEach(item => item.addEventListener('click',(e)=>{
   item.classList.add('on');
 }))
 
-/*
 //second_info
 const dot = document.querySelectorAll('.dot > li');
 const title = document.querySelector('#sec_info_txt h1'); 
@@ -50,8 +49,9 @@ dot.forEach(item => {
         }, 500);
     });
 });
-*/
 
+
+/*
 const sliderWrap = document.querySelector('.slider_wrap');
 const sliderImg = sliderWrap.querySelector('.slider_img');
 const sliderInner = sliderWrap.querySelector('.slider_inner');
@@ -68,7 +68,7 @@ let dotIndex = '';
 function init(){
   //이미지 갯수만큼 닷 메뉴 생성
   slider.forEach(()=>{
-    dotIndex += `<a href="#" class="dot"></a>`;
+    dotIndex += `<a href="" class="dot"></a>`;
   })
     sliderDot.innerHTML = dotIndex;
 
@@ -100,3 +100,4 @@ sliderBtn.forEach((btn, index)=>{
       }
   })
 })
+*/
