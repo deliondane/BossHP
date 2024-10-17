@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: "Montserrat","Noto Sans KR";}
+ul,li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+#total{
+  width: 100%;
+}
+
+.header{
+  width: 100%;
+  background-color: #181818;
+}
+.header .top{
+  width: 100%;
+}
+.header nav.top{
+  padding: 0 25px;
+  width: 100%;
+  height: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*좌측 토글(nav) 버튼*/
+header .top .menu-toggle-btn{
+  cursor: pointer;
+  display: block;
+  width: 23px;
+  height: 26px;
+}
+header .top .menu-toggle-btn > span{
+  display: block;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #F8F9FB;
+}
+header .top .menu-toggle-btn > span:nth-child(2){
+  margin: 6px 0;
+}
+
+/*로고*/
+header .top .logo{
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+header .top .logo img{
+  width: 170px;
+}
+
+/*상단 바 우측 버튼*/
+header .top .menu-btn{
+  display: flex;
+  color: #F8F9FB;
+  cursor: pointer;
+}
+header .top .menu-btn li{
+  padding-left: 10px;
+}
+
+/* nav하단 bar */
+ul#bottom {
+  width: 962.5px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  color: #F8F9FB;
+}
+
+ul#bottom > li {
+  width: 120px;
+  height: 46px;
+  position: relative;
+  text-align: center;
+}
+
+ul#bottom > li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+ul#bottom > li > a:hover{
+  color: #999;
+}
+
+ul#bottom ul.dropdown {
+  position: absolute;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+ul#bottom ul.dropdown li{
+  width: 120px;
+  height: auto;
+  text-align: center;
+}
+ul#bottom ul.dropdown li a{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+ul#bottom li:hover ul.dropdown {
+  max-height: 500px;
+  transition: max-height .5s ease;
+  background-color: #fff;
+  color: #181818;
+}
+
+ul#bottom ul.dropdown li {
+  text-align: center;
+  padding: 5px; /* padding으로 통일성 유지 */
+}
+
+ul#bottom ul.dropdown li a {
+  display: block; /* inline-block 대신 block 사용 */
+  line-height: 14px;
+}
+
+ul#bottom ul.dropdown li:hover{
+  background-color: #181818;
+  color: #F8F9FB;
+}
