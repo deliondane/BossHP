@@ -1,16 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
-*{margin: 0; padding: 0; box-sizing: border-box; font-family: "Montserrat","Noto Sans KR";}
-ul,li{list-style: none;}
-a{text-decoration: none; color: inherit;}
 
-#total{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", "Noto Sans KR";
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#total {
   width: 100%;
 }
 
 
 
 
-.main{
+.main {
   width: 100%;
   height: 60rem;
   background-image: url(https://cdn.imweb.me/thumbnail/20240930/2a3226ee1b2f2.jpg);
@@ -20,7 +34,8 @@ a{text-decoration: none; color: inherit;}
   background-size: cover;
   position: relative;
 }
-.main .main_txt{
+
+.main .main_txt {
   width: 60%;
   height: 20rem;
   position: absolute;
@@ -28,20 +43,24 @@ a{text-decoration: none; color: inherit;}
   bottom: 0;
   color: #fff;
 }
-.main .main_txt p{
+
+.main .main_txt p {
   font-size: 18px;
   font-weight: 400;
 }
-.main .main_txt h1{
+
+.main .main_txt h1 {
   font-size: 36px;
   font-weight: 800;
   padding: 5px 0;
 }
-.main .main_txt h3{
+
+.main .main_txt h3 {
   font-size: 30px;
   font-weight: 400;
 }
-.main .main_txt button{
+
+.main .main_txt button {
   border: 1px solid #fff;
   padding: 14px 55px;
   background-color: transparent;
@@ -50,7 +69,8 @@ a{text-decoration: none; color: inherit;}
   cursor: pointer;
   transition: all .3s;
 }
-.main .main_txt button:hover{
+
+.main .main_txt button:hover {
   background-color: #fff;
   color: #999;
 }
@@ -58,7 +78,7 @@ a{text-decoration: none; color: inherit;}
 
 
 /*왜 BOSE온라인 스토어에서 구매?*/
-#mid_info_bar{
+#mid_info_bar {
   width: 100%;
   height: 15rem;
   background-color: #181818;
@@ -66,24 +86,28 @@ a{text-decoration: none; color: inherit;}
   justify-content: center;
   align-items: center;
 }
-#mid_info_bar .mid_info_box{
+
+#mid_info_bar .mid_info_box {
   width: 80rem;
   height: 139.965px;
   display: flex;
   justify-content: space-around;
 }
-#mid_info_bar .mid_info{
+
+#mid_info_bar .mid_info {
   width: 18.6rem;
   height: 8rem;
   padding: 22px 15px;
 }
-#mid_info_bar .mid_info h3{
+
+#mid_info_bar .mid_info h3 {
   color: #fff;
   font-size: 22px;
   font-weight: 400;
   text-align: center;
 }
-#mid_info_bar .info{
+
+#mid_info_bar .info {
   /* width: 297.5px;
   height: 139.97px; */
   width: 18.6rem;
@@ -96,22 +120,26 @@ a{text-decoration: none; color: inherit;}
   border: transparent;
   text-align: left;
 }
-#mid_info_bar .info_left{
-  color: rgb(255,255,255);
+
+#mid_info_bar .info_left {
+  color: rgb(255, 255, 255);
   line-height: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#mid_info_bar .info_left h5{
+
+#mid_info_bar .info_left h5 {
   font-size: 18px;
   font-weight: 300;
 }
-#mid_info_bar .info_left span{
+
+#mid_info_bar .info_left span {
   font-size: 14px;
 }
-#mid_info_bar .info_right{
+
+#mid_info_bar .info_right {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -120,10 +148,11 @@ a{text-decoration: none; color: inherit;}
 }
 
 /*여기서부터 다시 시작*/
-#mic_info_bar .info_right i{
+#mic_info_bar .info_right i {
   /*아이콘 변경 후 사이즈 재조정*/
   font-size: 50px;
 }
+
 /*======================
 .slider_wrap{
   width: 100%;
@@ -178,7 +207,7 @@ a{text-decoration: none; color: inherit;}
 }
 ========================*/
 
-#second_info{
+#second_info {
   width: 100%;
   height: 45rem;
   background-image: url(https://cdn.imweb.me/thumbnail/20240625/9869ccb2941a2.png);
@@ -188,7 +217,7 @@ a{text-decoration: none; color: inherit;}
   position: relative;
 }
 
-#sec_info_txt{
+#sec_info_txt {
   width: 60%;
   height: 20rem;
   position: absolute;
@@ -196,16 +225,19 @@ a{text-decoration: none; color: inherit;}
   bottom: 0;
   color: #fff;
 }
-#sec_info_txt h1.second_info_title{
+
+#sec_info_txt h1.second_info_title {
   font-size: 36px;
   font-weight: 800;
   padding: 10px 0;
 }
-#sec_info_txt h3{
-  font-size:20px;
+
+#sec_info_txt h3 {
+  font-size: 20px;
   font-weight: 400;
 }
-#sec_info_txt button{
+
+#sec_info_txt button {
   border: 1px solid #fff;
   padding: 14px 55px;
   background-color: transparent;
@@ -214,19 +246,21 @@ a{text-decoration: none; color: inherit;}
   cursor: pointer;
   transition: all .3s;
 }
-#sec_info_txt button:hover{
+
+#sec_info_txt button:hover {
   background-color: #fff;
   color: #999;
 }
 
-#second_info .dot{
+#second_info .dot {
   position: absolute;
   display: flex;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
 }
-.dot > li{
+
+.dot>li {
   width: .5rem;
   height: .5rem;
   background-color: #737882;
@@ -234,47 +268,54 @@ a{text-decoration: none; color: inherit;}
   margin: .3rem;
   cursor: pointer;
 }
-.dot > li.on,
-.dot > li:hover{
-  background-color:#fff;
+
+.dot>li.on,
+.dot>li:hover {
+  background-color: #fff;
 }
 
 
 
-#product{
+#product {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-#product #product_name{
+
+#product #product_name {
   width: 100%;
   margin: 70px 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#product #product_name .product_name{
-  width: 18.6rem; 
+
+#product #product_name .product_name {
+  width: 18.6rem;
   margin: 0 1rem;
   border: 0.5px solid #99999980;
   border-radius: 2rem;
-  padding: 3rem; /*50px*/
+  padding: 3rem;
+  /*50px*/
   text-align: center;
   cursor: pointer;
 }
-#product .product_name p{
+
+#product .product_name p {
   font-size: 14px;
   color: #999;
 }
-#product .product_name h3{
+
+#product .product_name h3 {
   font-size: 20px;
   margin: 10px 0;
 }
 
-#product #new_product{
+#product #new_product {
   width: 100%;
 }
-#product .new_product{
+
+#product .new_product {
   width: 80rem;
   margin: 70px auto;
   display: flex;
@@ -282,32 +323,38 @@ a{text-decoration: none; color: inherit;}
   align-items: center;
   position: relative;
 }
-#product h2{
+
+#product h2 {
   font-size: 36px;
   color: #181818;
   margin: 10px 0;
 }
-#product .npd_box{
+
+#product .npd_box {
   width: 100%;
   padding: 50px 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.new_product .new_product_detail{
+
+.new_product .new_product_detail {
   width: 20%;
   cursor: pointer;
 }
-.new_product .new_product_detail img{
+
+.new_product .new_product_detail img {
   width: 18rem;
 }
-.new_product .new_product_detail #product_color{
+
+.new_product .new_product_detail #product_color {
   width: 18rem;
   box-sizing: border-box;
   display: flex;
   padding: .3rem .1rem;
 }
-.new_product .new_product_detail #product_color span.product_color{
+
+.new_product .new_product_detail #product_color span.product_color {
   display: inline-block;
   width: .5rem;
   height: .5rem;
@@ -315,16 +362,18 @@ a{text-decoration: none; color: inherit;}
   margin-right: .2rem;
 }
 
-.new_product .new_product_detail p{
+.new_product .new_product_detail p {
   font-size: 13px;
   display: block;
   padding: 5px 0;
 }
-.new_product .new_product_detail h5{
+
+.new_product .new_product_detail h5 {
   font-size: 16px;
   padding: 5px 0;
 }
-.new_product .new_product_detail .single{
+
+.new_product .new_product_detail .single {
   font-size: 8px;
   background-color: #737882;
   color: #F8F9FB;
@@ -334,25 +383,30 @@ a{text-decoration: none; color: inherit;}
   display: inline-block;
   margin: 5px 0;
 }
-.new_product .new_product_detail .single:hover{
+
+.new_product .new_product_detail .single:hover {
   background-color: #181818;
 }
-.new_product .new_product_detail .new_product_detail_icon{
+
+.new_product .new_product_detail .new_product_detail_icon {
   display: flex;
   margin: 5px 0;
 }
-.new_product .new_product_detail .new_product_detail_icon span{
+
+.new_product .new_product_detail .new_product_detail_icon span {
   display: inline-block;
   font-size: 18px;
   padding-right: 3px;
 }
-.new_product .new_product_detail .new_product_detail_icon p{
+
+.new_product .new_product_detail .new_product_detail_icon p {
   font-size: 11px;
   line-height: 20px;
   padding-right: 10px;
 }
+
 /*dot*/
-#new_product ul.product_dot{
+#new_product ul.product_dot {
   display: inline-block;
   width: 100%;
   height: 2rem;
@@ -360,17 +414,20 @@ a{text-decoration: none; color: inherit;}
   justify-content: center;
   transform: all .1s ease;
 }
-#new_product ul.product_dot li{
+
+#new_product ul.product_dot li {
   width: .5rem;
   height: .5rem;
   background-color: #737882;
   border-radius: 50%;
   margin: .5rem;
 }
-#new_product ul.product_dot li:hover{
+
+#new_product ul.product_dot li:hover {
   background-color: #181818;
 }
-#new_product ul.product_dot li.on{
+
+#new_product ul.product_dot li.on {
   background-color: #181818;
 }
 
@@ -396,7 +453,7 @@ a{text-decoration: none; color: inherit;}
 
 
 /*main2*/
-.main2{
+.main2 {
   width: 100%;
   height: 60rem;
   background-image: url(https://cdn.imweb.me/thumbnail/20240223/de8ecf78ff7e0.jpg);
@@ -404,8 +461,10 @@ a{text-decoration: none; color: inherit;}
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transition: all .5s;
 }
-.main2 .main2_txt{
+
+.main2 .main2_txt {
   width: 60%;
   height: 20rem;
   position: absolute;
@@ -414,20 +473,24 @@ a{text-decoration: none; color: inherit;}
   color: #ffffff;
   text-align: right;
 }
-.main2 .main2_txt p{
+
+.main2 .main2_txt p {
   font-size: 18px;
   font-weight: 400;
 }
-.main2 .main2_txt h1{
+
+.main2 .main2_txt h1 {
   font-size: 36px;
   font-weight: 800;
   padding: 5px 0;
 }
-.main2 .main2_txt h3{
+
+.main2 .main2_txt h3 {
   font-size: 30px;
   font-weight: 400;
 }
-.main2 .main2_txt button{
+
+.main2 .main2_txt button {
   border: 1px solid #fff;
   padding: 14px 55px;
   background-color: transparent;
@@ -436,13 +499,14 @@ a{text-decoration: none; color: inherit;}
   cursor: pointer;
   transition: all .3s;
 }
-.main2 .main2_txt button:hover{
+
+.main2 .main2_txt button:hover {
   background-color: #fff;
   color: #999;
 }
 
 /*footer*/
-#footer{
+#footer {
   width: 100%;
   box-sizing: border-box;
   background-color: #181818;
@@ -451,43 +515,50 @@ a{text-decoration: none; color: inherit;}
   flex-direction: column;
   align-items: center;
 }
-#footer .footer_top{
+
+#footer .footer_top {
   padding: 50px 20%;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-#footer .footer_top ul.ft_top{
+
+#footer .footer_top ul.ft_top {
   display: flex;
   font-weight: bold;
   font-size: 13px;
 }
-#footer .footer_top ul.ft_top li{
+
+#footer .footer_top ul.ft_top li {
   width: 25%;
   text-align: center;
 }
-#footer .footer_top span{
+
+#footer .footer_top span {
   width: 100%;
   height: 1px;
   background-color: #fff;
   margin: 15px 0;
 }
-#footer .footer_top .ft_bottom{
+
+#footer .footer_top .ft_bottom {
   display: flex;
   font-size: 12px;
   width: 100%;
   justify-content: center;
 }
-#footer .footer_top .ft_bottom ul{
+
+#footer .footer_top .ft_bottom ul {
   width: 25%;
   text-align: center;
 }
-#footer .footer_top .ft_bottom ul li{
+
+#footer .footer_top .ft_bottom ul li {
   padding: 5px 0;
 }
 
 
-#footer .footer_mid{
+#footer .footer_mid {
   width: 100%;
   height: 3rem;
   background-color: #282828;
@@ -495,52 +566,58 @@ a{text-decoration: none; color: inherit;}
   display: flex;
   align-items: center;
 }
-#footer .footer_mid ul{
+
+#footer .footer_mid ul {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-#footer .footer_mid ul li{
+
+#footer .footer_mid ul li {
   padding: 0 10px;
 }
 
 
-.footer_bottom{
+.footer_bottom {
   width: 100%;
   padding: 50px 20%;
   display: flex;
   align-items: center;
 }
-.footer_bottom .fb_logo{
+
+.footer_bottom .fb_logo {
   width: 20%;
   margin: 0 6rem 0 4rem;
 }
-.footer_bottom .fb_logo img{
+
+.footer_bottom .fb_logo img {
   display: inline-block;
   width: 90%;
 }
-.footer_bottom .text_table{
+
+.footer_bottom .text_table {
   width: 80%;
 }
-.footer_bottom .text_table p.firstp span{
+
+.footer_bottom .text_table p.firstp span {
   height: 1px;
   width: 100%;
   display: inline-block;
   background-color: #fff;
 }
-.footer_bottom .text_table .innerdiv{
+
+.footer_bottom .text_table .innerdiv {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.footer_bottom .text_table .innerdiv .rightp{
+
+.footer_bottom .text_table .innerdiv .rightp {
   display: flex;
 }
-.footer_bottom .text_table .innerdiv .rightp p{
+
+.footer_bottom .text_table .innerdiv .rightp p {
   display: inline-block;
   margin: 0 1px;
   line-height: 25px;
 }
-
-
-

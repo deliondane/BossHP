@@ -10,7 +10,19 @@
       overflow-x: hidden;
       box-sizing: border-box;
     }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 22
+    }
   </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,0&icon_names=download" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
   <link rel="shortcut icon" type="image/x-icon"
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAANtJREFUWEftltENgjAQhu9gEHEDow6AS2B8UhaBRgbRN2QLF4C4gSwCJySa+EB7DYXwcn1t7/6vX9O0CAsPXDgfBMDKwF7lIRGegTAEgIA5thoI68Zv4pc61dwRswAblQd+6725RkPzjdeuOQgWYJc+bt2OLmMAOmPPMosOploeICloVPi3qLwejRkCIAbEgBgQA2JADDgZIMIYkFZdE6V7smd7jvvwKovuffA2KVIdxCwA/+G/nesgJgcYCjdBTApgCtdBTAZgEz4E4Qzg8iG1qWWvoU0TlzUC8AHOApchsr9BIQAAAABJRU5ErkJggg==" />
   <link rel="stylesheet"
@@ -125,34 +137,103 @@
       <ul class="sub_depth">
         <li>
           <a href="index.html">Home</a>
-          <span class="icon-arrow-right" data-cnt>
-            ::before
-          </span>
         </li>
         <li>
+          <span class="material-symbols-outlined" style"opsz:22;">
+            chevron_right
+          </span>
+        </li>
+        <li class="active">
           <a href="headPhonePage.html">이어폰</a>
-          <span class="icon-arrow-right" data-cnt>
-            ::before
           </span>
-        </li>
-        <li>
-          <a href="headPhonePage.html">전체</a>
         </li>
       </ul>
 
       <div class="goods_wrapper">
         <div class="goodsale">
+          <img src="img/earbud1.jpg" style="width: 625px;">
+          <article class="goodstxt">
+            <div class="goods_txt_top">
+              <p>[BOSE] 보스 울트라 오픈 이어버드 - 다이아몬드 60주년 에디션</p>
+              <p class="boldtxt">359,000원</p>
+              <div class="discount">
+                <div class="discount_left">
+                  <p>5% 할인</p>
+                  <p>BOSE 첫 구매 쿠폰</p>
+                </div>
+                <div class="discount_right">
+                  <div>
+                    <p>쿠폰받기</p>
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'opsz' 10;">
+                      download
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div><!--goods_txt_top-->
 
+            <div class="goods_txt_mid">
+              <p><strong>원산지 </strong>중국</p>
+              <p><strong>구매혜택 </strong>10,770원 적립금 적립예정</p>
+              <p><strong>배송 방법 </strong>택배</p>
+              <p><strong>배송비 </strong>무료 | 도서산간 배송비 추가</p>
+
+              <div class="colorPick">
+                <p>색상을 선택해주세요 (필수) *</p>
+                <div> </div>
+              </div>
+
+              <div class="addition">
+                <p>추가 상품</p>
+                <select>
+                  <option value="none" selected>추가 상품</option>
+                  <option value="black">
+                    블랙<br>
+                    <b>359,000원</b>
+                  </option>
+                  <option value="whiteSmoke">
+                    화이트 스모크<br>
+                    <b>359,000원</b>
+                  </option>
+                  <option value="moonstoneBlue">
+                    문스톤 블루<br>
+                    <b>359,000원</b>
+                  </option>
+                  <option value="lunaBlue">
+                    루나 블루<br>
+                    <b>359,000원</b>
+                  </option>
+                </select>
+              </div>
+            </div><!--goods_txt_mid-->
+
+            <div class="goods_txt_bottom">
+              <button class="active">구매하기</button>
+              <button>장바구니</button>
+              <button><span class="material-symbols-outlined">
+                  favorite
+                </span>0</button>
+            </div>
+          </article>
         </div><!--goodsale-->
 
         <div class="review_wrapper">
-          <nav class="categorize"></nav>
-          <nav class="review"></nav>
+          <ul class="categorize">
+            <li class="active"><a href="#goods_detail_wrapper">상세정보</a></li>
+            <li><a href="#review">구매평(9)</a></li>
+            <li><a href="#qna_wrap">Q&A</a></li>
+            <li><a href="#return_wrap">반품/교환</a></li>
+          </ul>
+          <nav id="review">
+
+          </nav>
         </div><!--review_wrapper-->
 
-        <div class="goods_detail_wrapper"></div><!--goods_detail_wrapper-->
-        <div class="qna_wrap"></div><!--qna_wrap-->
-        <div class="return_wrap"></div><!--return_wrap-->
+        <div id="goods_detail_wrapper">
+
+        </div><!--goods_detail_wrapper-->
+        <div id="qna_wrap"></div><!--qna_wrap-->
+        <div id="return_wrap"></div><!--return_wrap-->
       </div>
     </div>
   </div>

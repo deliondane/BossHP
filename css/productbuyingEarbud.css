@@ -1,0 +1,215 @@
+.product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Home>이어폰*/
+.product ul.sub_depth {
+  display: flex;
+  width: 80rem;
+  margin: 40px auto 0 auto;
+  font-size: 15px;
+  font-weight: 200;
+  color: #18181866;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.product ul.sub_depth li {
+  padding: 0 3px;
+  display: inline-block;
+}
+
+.product ul.sub_depth li:nth-child(2) {
+  padding-top: 5px;
+}
+
+.product ul.sub_depth li.active {
+  color: #181818;
+  font-weight: 300;
+}
+
+
+.goods_wrapper {
+  width: 80rem;
+  margin: 10px auto;
+}
+
+/*이어폰 사진 및 정보*/
+.goodsale {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goodsale>img {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.goodsale .goodstxt {
+  width: 50%;
+  padding: 0 15px 0 93.75px;
+  /*media커리 시, 좌측 패딩 줄이기*/
+  display: flex;
+  flex-direction: column;
+}
+
+.goodsale .goodstxt .goods_txt_top {
+  width: 100%;
+  font-size: 26px;
+  font-weight: 300;
+  border-bottom: 1px solid #18181866;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.goodsale .goodstxt .goods_txt_top>p {
+  margin-bottom: 7.8px;
+}
+
+.goodsale .goodstxt .goods_txt_top .boldtxt {
+  font-weight: bold;
+}
+
+.goods_txt_top .discount {
+  width: 100%;
+  border: 1px solid #18181866;
+  border-radius: 10px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.goods_txt_top .discount .discount_left {
+  padding: 16px 20px;
+  width: 75%;
+}
+
+.goods_txt_top .discount .discount_left p:first-child {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.goods_txt_top .discount .discount_left p:nth-child(2) {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.goods_txt_top .discount .discount_right {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.goods_txt_top .discount .discount_right div {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #181818;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 24px;
+}
+
+.goods_txt_top .discount .discount_right div span {
+  font-size: 18px;
+  padding-left: 3px;
+}
+
+
+/*goods_txt_mid*/
+.goods_txt_mid {
+  width: 100%;
+  font-size: 15px;
+  color: #181818;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.goods_txt_mid p {
+  margin: 8px 0;
+}
+
+.goods_txt_mid p strong {
+  padding-right: 8px;
+}
+
+.goods_txt_mid .colorPick,
+.goods_txt_mid .addition {
+  padding-top: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.goods_txt_mid .colorPick div {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border: 1px solid #18181866;
+  cursor: pointer;
+}
+
+.goods_txt_mid .addition select {
+  width: 100%;
+  padding: 8px 24px 8px 12px;
+}
+
+/*goods_txt_bottom*/
+.goods_txt_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods_txt_bottom button {
+  width: 32%;
+  background-color: #fff;
+  color: #181818;
+  padding: 12px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #18181866;
+  font-weight: 300;
+}
+
+.goods_txt_bottom button.active {
+  background-color: #181818;
+  color: #fff;
+}
+
+
+/*review wrapper*/
+.review_wrapper {
+  padding: 35px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review_wrapper ul.categorize {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.review_wrapper ul.categorize li {
+  display: inline-block;
+  width: 25%;
+  padding: 13.5px 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 15px;
+  background-color: #18181808;
+  color: #181818;
+}
+
+.review_wrapper ul.categorize li.active {
+  background-color: #181818;
+  color: #fff;
+}
