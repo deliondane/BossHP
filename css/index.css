@@ -21,7 +21,8 @@ a {
   width: 100%;
 }
 
-#top{ /*nav position fixed 주기 위함*/
+#top {
+  /*nav position fixed 주기 위함*/
   top: 113px;
   position: relative;
 }

@@ -1,65 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
-*{margin: 0; padding: 0; box-sizing: border-box; font-family: "Montserrat","Noto Sans KR";}
-ul,li{list-style: none;}
-a{text-decoration: none; color: inherit;}
 
-#total{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Noto Sans KR";
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#total {
   width: 100%;
 }
 
-.header{
+.header {
   width: 100%;
   background-color: #181818;
   position: fixed;
   z-index: 9;
 }
-.header .top{
+
+.header .top {
   width: 100%;
 }
-.header nav.top{
+
+.header nav.top {
   padding: 0 25px;
   width: 100%;
   height: 67px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  position: relative;
+  /* 버튼을 절대 배치하기 위해 설정 */
 }
 
 /*좌측 토글(nav) 버튼*/
-header .top .menu-toggle-btn{
+header .top .menu-toggle-btn {
   cursor: pointer;
   display: block;
   width: 23px;
   height: 26px;
 }
-header .top .menu-toggle-btn > span{
+
+header .top .menu-toggle-btn>span {
   display: block;
   height: 2px;
   border-radius: 10px;
   background-color: #F8F9FB;
 }
-header .top .menu-toggle-btn > span:nth-child(2){
+
+header .top .menu-toggle-btn {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+
+header .top .menu-toggle-btn>span:nth-child(2) {
   margin: 6px 0;
 }
 
+header .top .menu-toggle-btn:hover span {
+  background-color: #666;
+}
+
+
 /*로고*/
-header .top .logo{
+header .top .logo {
+  margin: auto;
+  /* 가운데 정렬 */
+  width: 170px;
   display: flex;
   justify-content: center;
-  cursor: pointer;
-}
-header .top .logo img{
-  width: 170px;
+  align-items: center;
 }
 
 /*상단 바 우측 버튼*/
-header .top .menu-btn{
+header .top .menu-btn {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   color: #F8F9FB;
   cursor: pointer;
 }
-header .top .menu-btn li{
+
+header .top .menu-btn li {
   padding-left: 10px;
+}
+
+header .top .menu-btn li:not(:first-child) {
+  padding-left: none;
 }
 
 /* nav하단 bar */
@@ -71,14 +112,14 @@ ul#bottom {
   color: #F8F9FB;
 }
 
-ul#bottom > li {
+ul#bottom>li {
   width: 120px;
   height: 46px;
   position: relative;
   text-align: center;
 }
 
-ul#bottom > li a {
+ul#bottom>li a {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -88,7 +129,7 @@ ul#bottom > li a {
   transition: color 0.3s;
 }
 
-ul#bottom > li > a:hover{
+ul#bottom>li>a:hover {
   color: #999;
 }
 
@@ -98,12 +139,14 @@ ul#bottom ul.dropdown {
   overflow: hidden;
   z-index: 1;
 }
-ul#bottom ul.dropdown li{
+
+ul#bottom ul.dropdown li {
   width: 120px;
   height: auto;
   text-align: center;
 }
-ul#bottom ul.dropdown li a{
+
+ul#bottom ul.dropdown li a {
   width: 100%;
   height: auto;
   text-align: center;
@@ -118,75 +161,177 @@ ul#bottom li:hover ul.dropdown {
 
 ul#bottom ul.dropdown li {
   text-align: center;
-  padding: 5px; /* padding으로 통일성 유지 */
+  padding: 5px;
+  /* padding으로 통일성 유지 */
 }
 
 ul#bottom ul.dropdown li a {
-  display: block; /* inline-block 대신 block 사용 */
+  display: block;
+  /* inline-block 대신 block 사용 */
   line-height: 14px;
 }
 
-ul#bottom ul.dropdown li:hover{
+ul#bottom ul.dropdown li:hover {
   background-color: #181818;
   color: #F8F9FB;
 }
 
 /* 사이드 메뉴 */
-.mobile-menu{
-  width: 400px;
-  height: 100vh;
+.mobile-menu {
   position: fixed;
-  z-index: 9999;
-  background: #181818;
-  color: #fff;
-  font-size: 16px;
-  padding: 30px;
-  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 20%;
+  /* 모바일 메뉴 너비 */
+  height: 100%;
+  background-color: #181818;
+  color: #fafafa;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: none;
+  /* 기본적으로 숨김 */
+  z-index: 1000;
+  padding: 30px;
 }
 
-.mobile-menu-bar{
+.mobile-menu-bar {
   width: 100%;
-  padding: 0 100px 16px 90px;
+  padding: 0 100px 32px 90px;
   box-sizing: border-box;
 }
-.menu-logoBt-wrap a{
+
+/* close-btn 스타일 수정 */
+.mobile-menu .close-btn {
+  position: absolute;
+  top: 30px;
+  /* 상단 padding 30px 안에서 위치 조정 */
+  right: 30px;
+  /* 우측 padding 30px 안에서 위치 조정 */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* X자를 구성하는 두 선 */
+.close-btn::before,
+.close-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #fafafa;
+  /* 선 색상 */
+  transform-origin: center;
+}
+
+/* 대각선 방향 */
+.close-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mobile-menu .close-btn:hover.close-btn::before,
+.mobile-menu .close-btn:hover.close-btn::after {
+  background-color: #999;
+}
+
+
+.menu-logoBt-wrap a {
   display: inline-block;
   width: 170px;
 }
 
-.mobile-menu-header-login{
+.mobile-menu-header-login {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.mobile-menu-header-login p{
+
+.mobile-menu-header-login p {
   color: #999;
   font-weight: 600;
 }
 
+.mobile-menu-header-login button:hover {
+  color: #999;
+}
 
-.mobile-menu-list{
+
+.mobile-menu-list {
   width: 100%;
   padding: 32px 0;
 }
-.mobile-menu-list ul li{
+
+/* .mobile-menu-list에서 li는 flex로 배치 */
+.mobile-menu-list ul li {
   padding: 8px 0;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  /* li 내에서 a와 button을 양쪽 끝으로 배치 */
 }
-.mobile-menu-list ul li button{
+
+/* 드롭다운 버튼 스타일 */
+.mobile-menu-list ul li button {
   font-weight: lighter;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* 버튼 회전 애니메이션 */
 }
-.mobile-menu-list ul li .mobile-menu-list-dropdown{
-  display: none;
+
+/* 버튼이 열릴 때 회전 */
+.mobile-menu-list ul li button.open i {
+  transform: rotate(180deg);
+}
+
+/* 드롭다운 메뉴 기본 스타일 */
+.mobile-menu-list ul li .mobile-menu-list-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  /* 내용이 넘치지 않도록 설정 */
+  list-style: none;
+  padding-left: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  /* 기본적으로 숨김 */
+  transition: max-height 0.3s ease-out, visibility 0s 0.3s;
+  /* max-height와 visibility 애니메이션 */
+}
+
+/* 드롭다운 메뉴가 열리면 */
+.mobile-menu-list ul li .mobile-menu-list-dropdown.show {
+  max-height: 1000px;
+  /* 충분히 큰 값을 설정하여 내용에 맞게 확장됨 */
+  visibility: visible;
+  /* 드롭다운이 열리면 보이도록 설정 */
+  transition: max-height 0.3s ease-in, visibility 0s 0s;
+  /* 애니메이션이 부드럽게 */
 }
 
 
-.mobile-menu .mobile-menu-footer-sns span{
+.mobile-menu-list ul li a:hover {
+  color: #999;
+}
+
+.mobile-menu-list ul li button:hover {
+  color: #999;
+}
+
+
+.mobile-menu .mobile-menu-footer-sns span {
   display: inline-block;
 }
-.mobile-menu .mobile-menu-footer-sns span a{
+
+.mobile-menu .mobile-menu-footer-sns span a {
   display: block;
   width: 27px;
   height: 27px;
@@ -196,9 +341,34 @@ ul#bottom ul.dropdown li:hover{
   padding-top: 2px;
   box-sizing: border-box;
 }
-.mobile-menu .mobile-menu-footer-sns span a:hover{
+
+.mobile-menu .mobile-menu-footer-sns span a:hover {
   background: #fff;
 }
-.mobile-menu .mobile-menu-footer-sns span a:hover i{
+
+.mobile-menu .mobile-menu-footer-sns span a:hover i {
   color: #000
+}
+
+
+
+
+@keyframes slideIn {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
 }
