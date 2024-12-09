@@ -101,3 +101,21 @@ sliderBtn.forEach((btn, index)=>{
   })
 })
 */
+
+
+// 사이드 메뉴
+const sideMenuBar = document.getElementsByClassName('menu-toggle-btn');
+const mobileMenu = document.getElementsByClassName('mobile-menu-bar');
+const closeBtn = document.getElementsByClassName('mobile-menu-bar');
+
+sideMenuBar.addEventListener('click', function(){
+  mobileMenu.style.display = block;
+  mobileMenu.style.animate = ({left: 0}, 500)
+  sideMenuBar.style.screen = '';
+})
+
+closeBtn.addEventListener('click', function(){
+  mobileMenu.style.animate = ({left: '-100%'}, 500)
+  mobileMenu.style.display = none;
+  sideMenuBar.style.screen = none;
+})
