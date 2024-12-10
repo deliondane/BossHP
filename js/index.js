@@ -241,14 +241,14 @@ const dropdownBtn = document.querySelectorAll('.dropdownBtn');
 // 각 드롭다운 버튼에 클릭 이벤트 리스너 추가
 dropdownBtn.forEach(button => {
   button.addEventListener('click', function () {
-    const dropdownMenu = this.nextElementSibling; // 버튼 바로 다음 요소가 드롭다운 메뉴
+    const dropdownMenu = this.parentNode.nextElementSibling;
 
     // 다른 드롭다운이 열려있다면 원상복구
     document.querySelectorAll('.mobile-menu-list-dropdown').forEach(menu => {
       if (menu !== dropdownMenu) { // 클릭된 메뉴가 아니라면
         menu.classList.remove('show'); // 닫기
         menu.style.maxHeight = '0'; // 높이 원상복구
-        menu.style.visibility = 'hidden'; // 숨기기
+        menu.style.display = 'block'; // 숨기기
       }
     });
 
@@ -263,13 +263,13 @@ dropdownBtn.forEach(button => {
     if (dropdownMenu.classList.contains('show')) {
       dropdownMenu.classList.remove('show'); // 닫기
       dropdownMenu.style.maxHeight = '0'; // 높이 원상복구
-      dropdownMenu.style.visibility = 'hidden'; // 숨기기
+      dropdownMenu.style.display = 'none'; // 숨기기
       this.classList.remove('open'); // 아이콘 원래대로
     } else {
       // 새로운 메뉴를 열기
       dropdownMenu.classList.add('show'); // 열기
       dropdownMenu.style.maxHeight = `${dropdownMenu.scrollHeight}px`; // 내용에 맞는 높이 설정
-      dropdownMenu.style.visibility = 'visible'; // 보이게 설정
+      dropdownMenu.style.display = 'block'; // 보이게 설정
       this.classList.add('open'); // 아이콘 180도 회전
     }
   });

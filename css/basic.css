@@ -182,36 +182,29 @@ ul#bottom ul.dropdown li:hover {
   top: 0;
   left: 0;
   width: 20%;
-  /* 모바일 메뉴 너비 */
   height: 100%;
   background-color: #181818;
   color: #fafafa;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: none;
-  /* 기본적으로 숨김 */
   z-index: 1000;
   padding: 30px;
 }
 
 .mobile-menu-bar {
   width: 100%;
-  padding: 0 100px 32px 90px;
-  box-sizing: border-box;
+  margin-bottom: 16px;
 }
 
-/* close-btn 스타일 수정 */
 .mobile-menu .close-btn {
   position: absolute;
-  top: 30px;
-  /* 상단 padding 30px 안에서 위치 조정 */
+  top: 40px;
   right: 30px;
-  /* 우측 padding 30px 안에서 위치 조정 */
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
 
-/* X자를 구성하는 두 선 */
 .close-btn::before,
 .close-btn::after {
   content: '';
@@ -221,11 +214,9 @@ ul#bottom ul.dropdown li:hover {
   width: 100%;
   height: 2px;
   background-color: #fafafa;
-  /* 선 색상 */
   transform-origin: center;
 }
 
-/* 대각선 방향 */
 .close-btn::before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -263,57 +254,46 @@ ul#bottom ul.dropdown li:hover {
 
 .mobile-menu-list {
   width: 100%;
-  padding: 32px 0;
+  padding: 16px 0;
+}
+.mobile-menu-list>ul>li{
+  padding: 8px 0;
 }
 
-/* .mobile-menu-list에서 li는 flex로 배치 */
-.mobile-menu-list ul li {
-  padding: 8px 0;
+.mobile-menu-list>ul>li>a {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  /* li 내에서 a와 button을 양쪽 끝으로 배치 */
 }
 
-/* 드롭다운 버튼 스타일 */
-.mobile-menu-list ul li button {
+.mobile-menu-list ul>li>a>button {
   font-weight: lighter;
   background: none;
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease;
-  /* 버튼 회전 애니메이션 */
 }
 
-/* 버튼이 열릴 때 회전 */
-.mobile-menu-list ul li button.open i {
+.mobile-menu-list>ul>li>a>button.open i {
   transform: rotate(180deg);
 }
 
 /* 드롭다운 메뉴 기본 스타일 */
-.mobile-menu-list ul li .mobile-menu-list-dropdown {
+.mobile-menu-list ul li ul.mobile-menu-list-dropdown {
   max-height: 0;
-  overflow: hidden;
-  /* 내용이 넘치지 않도록 설정 */
   list-style: none;
-  padding-left: 10px;
-  position: absolute;
   top: 100%;
-  left: 0;
+  left: 10px;
   width: 100%;
-  visibility: hidden;
-  /* 기본적으로 숨김 */
-  transition: max-height 0.3s ease-out, visibility 0s 0.3s;
-  /* max-height와 visibility 애니메이션 */
+  display: none;
+  transition: max-height 0.3s ease-out;
 }
 
-/* 드롭다운 메뉴가 열리면 */
 .mobile-menu-list ul li .mobile-menu-list-dropdown.show {
   max-height: 1000px;
   /* 충분히 큰 값을 설정하여 내용에 맞게 확장됨 */
-  visibility: visible;
+  display: block;
   /* 드롭다운이 열리면 보이도록 설정 */
-  transition: max-height 0.3s ease-in, visibility 0s 0s;
+  transition: max-height 0.3s ease-in;
   /* 애니메이션이 부드럽게 */
 }
 
