@@ -17,6 +17,12 @@ a {
   color: inherit;
 }
 
+button{
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
 #total {
   width: 100%;
 }
@@ -82,6 +88,10 @@ header .top .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+header .top .logo img{
+  width: 100%;
 }
 
 /*상단 바 우측 버튼*/
@@ -233,7 +243,12 @@ ul#bottom ul.dropdown li:hover {
 
 .menu-logoBt-wrap a {
   display: inline-block;
-  width: 170px;
+  width: 150px;
+}
+
+.menu-logoBt-wrap a img{
+  display: inline-block;
+  width: 100%;
 }
 
 .mobile-menu-header-login {
@@ -247,6 +262,9 @@ ul#bottom ul.dropdown li:hover {
   font-weight: 600;
 }
 
+.mobile-menu-header-login button{
+  color: #fafafa;
+}
 .mobile-menu-header-login button:hover {
   color: #999;
 }
@@ -288,13 +306,9 @@ ul#bottom ul.dropdown li:hover {
   transition: max-height 0.3s ease-out;
 }
 
-.mobile-menu-list ul li .mobile-menu-list-dropdown.show {
-  max-height: 1000px;
-  /* 충분히 큰 값을 설정하여 내용에 맞게 확장됨 */
-  display: block;
-  /* 드롭다운이 열리면 보이도록 설정 */
-  transition: max-height 0.3s ease-in;
-  /* 애니메이션이 부드럽게 */
+
+.mobile-menu-list .dropdownBtn{
+  color: #fafafa;
 }
 
 
@@ -302,7 +316,7 @@ ul#bottom ul.dropdown li:hover {
   color: #999;
 }
 
-.mobile-menu-list ul li button:hover {
+.mobile-menu-list .dropdownBtn:hover {
   color: #999;
 }
 

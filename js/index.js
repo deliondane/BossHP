@@ -235,45 +235,47 @@ closeBtn.addEventListener('click', function () {
 //   });
 // });
 
-// 모든 드롭다운 버튼을 선택
-const dropdownBtn = document.querySelectorAll('.dropdownBtn');
+// //모든 드롭다운 버튼을 선택
+// const dropdownBtn = document.querySelectorAll('.dropdownBtn');
 
-// 각 드롭다운 버튼에 클릭 이벤트 리스너 추가
-dropdownBtn.forEach(button => {
-  button.addEventListener('click', function () {
-    const dropdownMenu = this.parentNode.nextElementSibling;
+// // 각 드롭다운 버튼에 클릭 이벤트 리스너 추가
+// dropdownBtn.forEach(button => {
+//   button.addEventListener('click', function () {
+//     const dropdownMenu = this.parentNode.nextElementSibling.children;
 
-    // 다른 드롭다운이 열려있다면 원상복구
-    document.querySelectorAll('.mobile-menu-list-dropdown').forEach(menu => {
-      if (menu !== dropdownMenu) { // 클릭된 메뉴가 아니라면
-        menu.classList.remove('show'); // 닫기
-        menu.style.maxHeight = '0'; // 높이 원상복구
-        menu.style.display = 'block'; // 숨기기
-      }
-    });
+//     // 다른 드롭다운이 열려있다면 원상복구
+//     document.querySelectorAll('.mobile-menu-list-dropdown').forEach(menu => {
+//       if (menu !== dropdownMenu) { // 클릭된 메뉴가 아니라면
+//         menu.classList.remove('show'); // 닫기
+//         //menu.style.maxHeight = '0'; // 높이 원상복구
+//         menu.style.display = 'block'; // 숨기기
+//       }
+//     });
 
-    // 다른 버튼에서 열려있는 메뉴가 있으면 아이콘 원상복구
-    document.querySelectorAll('.dropdownBtn').forEach(btn => {
-      if (btn !== this) { // 클릭된 버튼이 아니라면
-        btn.classList.remove('open'); // 아이콘 회전 복구
-      }
-    });
+//     // 다른 버튼에서 열려있는 메뉴가 있으면 아이콘 원상복구
+//     document.querySelectorAll('.dropdownBtn').forEach(btn => {
+//       if (btn !== this) { // 클릭된 버튼이 아니라면
+//         btn.classList.remove('open'); // 아이콘 회전 복구
+//       }
+//     });
 
-    // 클릭된 메뉴가 이미 열려 있다면 닫기
-    if (dropdownMenu.classList.contains('show')) {
-      dropdownMenu.classList.remove('show'); // 닫기
-      dropdownMenu.style.maxHeight = '0'; // 높이 원상복구
-      dropdownMenu.style.display = 'none'; // 숨기기
-      this.classList.remove('open'); // 아이콘 원래대로
-    } else {
-      // 새로운 메뉴를 열기
-      dropdownMenu.classList.add('show'); // 열기
-      dropdownMenu.style.maxHeight = `${dropdownMenu.scrollHeight}px`; // 내용에 맞는 높이 설정
-      dropdownMenu.style.display = 'block'; // 보이게 설정
-      this.classList.add('open'); // 아이콘 180도 회전
-    }
-  });
-});
+//     // 클릭된 메뉴가 이미 열려 있다면 닫기
+//     if (dropdownMenu.classList.contains('show')) {
+//       dropdownMenu.classList.remove('show'); // 닫기
+//       dropdownMenu.style.maxHeight = '0'; // 높이 원상복구
+//       dropdownMenu.style.display = 'none'; // 숨기기
+//       this.classList.remove('open'); // 아이콘 원래대로
+//     } else {
+//       // 새로운 메뉴를 열기
+//       dropdownMenu.classList.add('show'); // 열기
+//       dropdownMenu.style.maxHeight = `${dropdownMenu.scrollHeight}px`; // 내용에 맞는 높이 설정
+//       dropdownMenu.style.display = 'block'; // 보이게 설정
+//       this.classList.add('open'); // 아이콘 180도 회전
+//     }
+//   });
+// });
+
+
 
 
 

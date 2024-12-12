@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
 
 * {
   margin: 0;
@@ -70,15 +70,13 @@ a {
   color: #fff;
   margin: 15px 0;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .main .main_txt button:hover {
   background-color: #fff;
   color: #999;
 }
-
-
 
 /*왜 BOSE온라인 스토어에서 구매?*/
 #mid_info_bar {
@@ -247,7 +245,7 @@ a {
   color: #fff;
   margin: 15px 0;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 #sec_info_txt button:hover {
@@ -263,21 +261,19 @@ a {
   transform: translateX(-50%);
 }
 
-.dot>li {
-  width: .5rem;
-  height: .5rem;
+.dot > li {
+  width: 0.5rem;
+  height: 0.5rem;
   background-color: #737882;
   border-radius: 50%;
-  margin: .3rem;
+  margin: 0.3rem;
   cursor: pointer;
 }
 
-.dot>li.on,
-.dot>li:hover {
+.dot > li.on,
+.dot > li:hover {
   background-color: #fff;
 }
-
-
 
 #product {
   width: 100%;
@@ -287,7 +283,7 @@ a {
 
 #product #product_name {
   width: 100%;
-  margin: 70px 50px 0;
+  margin: 70px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,34 +331,41 @@ a {
 
 #product .npd_box {
   width: 100%;
-  padding: 50px 0 50px;
+  padding: 50px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .new_product .new_product_detail {
-  width: 20%;
+  width: 18.6rem;
+  margin: 0 1rem;
   cursor: pointer;
+}
+.new_product .new_product_detail:nth-child(2){
+  margin: 0 32px;
+}
+.new_product .new_product_detail:nth-child(4){
+  margin-left: 32px;
 }
 
 .new_product .new_product_detail img {
-  width: 18rem;
+  width: 100%;
 }
 
 .new_product .new_product_detail #product_color {
   width: 18rem;
   box-sizing: border-box;
   display: flex;
-  padding: .3rem .1rem;
+  padding: 0.3rem 0.1rem;
 }
 
 .new_product .new_product_detail #product_color span.product_color {
   display: inline-block;
-  width: .5rem;
-  height: .5rem;
-  border: .1rem solid #99999960;
-  margin-right: .2rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 0.1rem solid #99999960;
+  margin-right: 0.2rem;
 }
 
 .new_product .new_product_detail p {
@@ -379,7 +382,7 @@ a {
 .new_product .new_product_detail .single {
   font-size: 8px;
   background-color: #737882;
-  color: #F8F9FB;
+  color: #f8f9fb;
   box-sizing: border-box;
   padding: 5px;
   border-radius: 3px;
@@ -415,15 +418,15 @@ a {
   height: 2rem;
   display: flex;
   justify-content: center;
-  transform: all .1s ease;
+  transform: all 0.1s ease;
 }
 
 #new_product ul.product_dot li {
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
   background-color: #737882;
   border-radius: 50%;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 #new_product ul.product_dot li:hover {
@@ -454,7 +457,6 @@ a {
   bottom: 0; left: 50%;
 } */
 
-
 /*main2*/
 .main2 {
   width: 100%;
@@ -464,7 +466,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .main2 .main2_txt {
@@ -500,7 +502,7 @@ a {
   color: #fff;
   margin: 15px 0;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .main2 .main2_txt button:hover {
@@ -560,7 +562,6 @@ a {
   padding: 5px 0;
 }
 
-
 #footer .footer_mid {
   width: 100%;
   height: 3rem;
@@ -579,7 +580,6 @@ a {
 #footer .footer_mid ul li {
   padding: 0 10px;
 }
-
 
 .footer_bottom {
   width: 100%;
@@ -623,4 +623,14 @@ a {
   display: inline-block;
   margin: 0 1px;
   line-height: 25px;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .new_product .new_product_detail:nth-child(2){
+    margin: 0 16px;
+  }
+  .new_product .new_product_detail:nth-child(4){
+    margin-left: 16px;
+  }
 }
