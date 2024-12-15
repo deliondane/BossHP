@@ -350,6 +350,22 @@ ul#bottom ul.dropdown li:hover {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background-color: #181818;
+    color: #fafafa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    padding: 30px;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -357,7 +373,7 @@ ul#bottom ul.dropdown li:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 50%;
     height: 100%;
     background-color: #181818;
     color: #fafafa;
