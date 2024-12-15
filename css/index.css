@@ -22,8 +22,6 @@ a {
 }
 
 #top {
-  /*nav position fixed 주기 위함*/
-  top: 113px;
   position: relative;
 }
 
@@ -90,30 +88,27 @@ a {
 
 #mid_info_bar .mid_info_box {
   width: 80rem;
-  height: 139.965px;
   display: flex;
   justify-content: space-around;
 }
 
 #mid_info_bar .mid_info {
-  width: 18.6rem;
+  width: calc(25% - 2rem);
   height: 8rem;
-  padding: 22px 15px;
+  padding: 22px .6rem;
 }
 
 #mid_info_bar .mid_info h3 {
   color: #fff;
-  font-size: 22px;
+  font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
 }
 
 #mid_info_bar .info {
-  /* width: 297.5px;
-  height: 139.97px; */
-  width: 18.6rem;
+  width: calc(25% - 2rem);
   height: 8rem;
-  padding: 22px 25px;
+  padding: 22px 1.2rem;
   display: flex;
   justify-content: space-between;
   background-color: #737882;
@@ -133,6 +128,7 @@ a {
 
 #mid_info_bar .info_left h5 {
   font-size: 18px;
+  line-height: 1.5rem;
   font-weight: 300;
 }
 
@@ -149,9 +145,9 @@ a {
 }
 
 /*여기서부터 다시 시작*/
-#mic_info_bar .info_right i {
+#mid_info_bar .info_right i {
   /*아이콘 변경 후 사이즈 재조정*/
-  font-size: 50px;
+  font-size: 1.5rem;
 }
 
 /*======================
@@ -315,7 +311,7 @@ a {
 }
 
 #product .new_product {
-  width: 80rem;
+  width: 100%;
   margin: 70px auto;
   display: flex;
   flex-direction: column;
@@ -330,28 +326,28 @@ a {
 }
 
 #product .npd_box {
-  width: 100%;
-  padding: 50px 0;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  /* 줄바꿈 허용 */
+  justify-content: space-between;
+  /* 요소 간 간격 조정 */
   align-items: center;
 }
 
 .new_product .new_product_detail {
-  width: 100%;
-  margin: 70px 0px;
-  cursor: pointer;
-}
-
-.new_product .new_product_detail:nth-child(2) {
-  margin: 0 32px;
-}
-
-.new_product .new_product_detail:nth-child(4) {
-  margin-left: 32px;
+  width: calc(25% - 2rem);
+  /* 4개 나눠서 배치 */
+  max-width: 300px;
+  /* 최대 크기 제한 */
+  min-width: 200px;
+  /* 최소 크기 제한 */
+  margin: 1rem;
+  /* 여백 */
+  box-sizing: border-box;
 }
 
 .new_product .new_product_detail img {
+  display: inline-block;
   width: 100%;
 }
 
@@ -524,7 +520,7 @@ a {
 }
 
 #footer .footer_top {
-  padding: 50px 20%;
+  padding: 50px 10%;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -585,14 +581,14 @@ a {
 
 .footer_bottom {
   width: 100%;
-  padding: 50px 20%;
+  padding: 50px 10%;
   display: flex;
   align-items: center;
 }
 
 .footer_bottom .fb_logo {
   width: 20%;
-  margin: 0 6rem 0 4rem;
+  margin: 0 4rem 0 2rem;
 }
 
 .footer_bottom .fb_logo img {
@@ -628,14 +624,41 @@ a {
 }
 
 
-@media screen and (max-width: 1320px) {}
 
-@media screen and (max-width: 1280px) {
-  .new_product .new_product_detail:nth-child(2) {
-    margin: 0 16px;
+@media screen and (max-width: 1024px) {
+
+
+  .footer_bottom .fb_logo {
+    width: 20%;
+    margin: 0 2rem 0 2rem;
   }
 
-  .new_product .new_product_detail:nth-child(4) {
-    margin-left: 16px;
+  .footer_bottom .text_table .innerdiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer_bottom {
+    width: 100%;
+    padding: 50px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer_bottom .fb_logo {
+    width: 30%;
+    margin: 0 0 10px 0;
+  }
+
+  .footer_bottom .text_table {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {}

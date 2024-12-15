@@ -17,7 +17,7 @@ a {
   color: inherit;
 }
 
-button{
+button {
   border: none;
   outline: none;
   background-color: inherit;
@@ -30,22 +30,15 @@ button{
 .header {
   width: 100%;
   background-color: #181818;
-  position: fixed;
-  z-index: 9;
-}
-
-.header .top {
-  width: 100%;
 }
 
 .header nav.top {
   padding: 0 25px;
   width: 100%;
-  height: 67px;
+  height: 4.2rem;
   display: flex;
   align-items: center;
   position: relative;
-  /* 버튼을 절대 배치하기 위해 설정 */
 }
 
 /*좌측 토글(nav) 버튼*/
@@ -90,7 +83,7 @@ header .top .logo {
   align-items: center;
 }
 
-header .top .logo img{
+header .top .logo img {
   width: 100%;
 }
 
@@ -115,10 +108,10 @@ header .top .menu-btn li:not(:first-child) {
 
 /* nav하단 bar */
 ul#bottom {
-  width: 962.5px;
+  width: 80%;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   color: #F8F9FB;
 }
 
@@ -246,7 +239,7 @@ ul#bottom ul.dropdown li:hover {
   width: 150px;
 }
 
-.menu-logoBt-wrap a img{
+.menu-logoBt-wrap a img {
   display: inline-block;
   width: 100%;
 }
@@ -262,9 +255,10 @@ ul#bottom ul.dropdown li:hover {
   font-weight: 600;
 }
 
-.mobile-menu-header-login button{
+.mobile-menu-header-login button {
   color: #fafafa;
 }
+
 .mobile-menu-header-login button:hover {
   color: #999;
 }
@@ -274,7 +268,8 @@ ul#bottom ul.dropdown li:hover {
   width: 100%;
   padding: 16px 0;
 }
-.mobile-menu-list>ul>li{
+
+.mobile-menu-list>ul>li {
   padding: 8px 0;
 }
 
@@ -307,7 +302,7 @@ ul#bottom ul.dropdown li:hover {
 }
 
 
-.mobile-menu-list .dropdownBtn{
+.mobile-menu-list .dropdownBtn {
   color: #fafafa;
 }
 
