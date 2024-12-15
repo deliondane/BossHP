@@ -79,7 +79,7 @@ a {
 /*왜 BOSE온라인 스토어에서 구매?*/
 #mid_info_bar {
   width: 100%;
-  height: 15rem;
+  padding: 7.5rem 1.6rem;
   background-color: #181818;
   display: flex;
   justify-content: center;
@@ -329,14 +329,12 @@ a {
   display: flex;
   flex-wrap: wrap;
   /* 줄바꿈 허용 */
-  justify-content: space-between;
+  justify-content: center;
   /* 요소 간 간격 조정 */
   align-items: center;
 }
 
 .new_product .new_product_detail {
-  width: calc(25% - 2rem);
-  /* 4개 나눠서 배치 */
   max-width: 300px;
   /* 최대 크기 제한 */
   min-width: 200px;
@@ -627,6 +625,31 @@ a {
 
 @media screen and (max-width: 1024px) {
 
+  #mid_info_bar .mid_info_box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #mid_info_bar .mid_info {
+    width: 100%;
+    height: 8rem;
+    padding: 22px .6rem;
+  }
+
+  #mid_info_bar .info {
+    width: calc(33% - 2rem);
+    height: 8rem;
+    padding: 22px 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #737882;
+    border-radius: 25px;
+    border: transparent;
+    text-align: left;
+  }
+
 
   .footer_bottom .fb_logo {
     width: 20%;
@@ -642,7 +665,102 @@ a {
   }
 }
 
+
+
 @media screen and (max-width: 768px) {
+
+  .main .main_txt {
+    width: 60%;
+    height: 20rem;
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    color: #fff;
+  }
+
+  .main .main_txt h1 {
+    font-size: 25px;
+    font-weight: 800;
+    padding: 5px 0;
+  }
+
+  .main .main_txt h3 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  #sec_info_txt h1.second_info_title {
+    font-size: 25px;
+    font-weight: 800;
+    padding: 10px 0;
+  }
+
+  #sec_info_txt h3 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  #mid_info_bar {
+    width: 100%;
+    padding: 5rem 1.6rem;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mid_info_bar .mid_info_box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #mid_info_bar .mid_info {
+    width: 100%;
+    height: 8rem;
+    padding: 22px .6rem;
+  }
+
+  #mid_info_bar .info {
+    width: 80%;
+    height: 8rem;
+    padding: 22px 1.2rem;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #737882;
+    border-radius: 25px;
+    border: transparent;
+    text-align: left;
+  }
+
+  #sec_info_txt {
+    width: 60%;
+    height: 20rem;
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    color: #fff;
+  }
+
+  #product #product_name {
+    display: none;
+  }
+
+  .main2 .main2_txt h1 {
+    font-size: 25px;
+    font-weight: 800;
+    padding: 5px 0;
+  }
+
+  .main2 .main2_txt h3 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
   .footer_bottom {
     width: 100%;
     padding: 50px 10%;

@@ -37,8 +37,8 @@ button {
   width: 100%;
   height: 4.2rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 /*좌측 토글(nav) 버튼*/
@@ -54,14 +54,6 @@ header .top .menu-toggle-btn>span {
   height: 2px;
   border-radius: 10px;
   background-color: #F8F9FB;
-}
-
-header .top .menu-toggle-btn {
-  position: absolute;
-  left: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: block;
 }
 
 header .top .menu-toggle-btn>span:nth-child(2) {
@@ -89,10 +81,6 @@ header .top .logo img {
 
 /*상단 바 우측 버튼*/
 header .top .menu-btn {
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   color: #F8F9FB;
   cursor: pointer;
@@ -361,3 +349,12 @@ ul#bottom ul.dropdown li:hover {
     left: -100%;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  ul#bottom {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {}
