@@ -352,6 +352,21 @@ ul#bottom ul.dropdown li:hover {
 
 
 @media screen and (max-width: 768px) {
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #181818;
+    color: #fafafa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    padding: 30px;
+  }
+
   ul#bottom {
     display: none;
   }
