@@ -45,11 +45,12 @@ button {
 header .top .menu-toggle-btn {
   cursor: pointer;
   display: block;
-  width: 23px;
+  width: 108px;
   height: 26px;
 }
 
 header .top .menu-toggle-btn>span {
+  width: 23px;
   display: block;
   height: 2px;
   border-radius: 10px;
@@ -67,12 +68,16 @@ header .top .menu-toggle-btn:hover span {
 
 /*로고*/
 header .top .logo {
-  margin: auto;
+  margin: 0 auto;
   /* 가운데 정렬 */
   width: 170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+header .top .logo a{
+  display: inline-block;
+  margin: 0 auto;
+  /* 가운데 정렬 */
+  width: 100%;
 }
 
 header .top .logo img {
@@ -366,6 +371,9 @@ ul#bottom ul.dropdown li:hover {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  
+}
 
 @media screen and (max-width: 768px) {
 
@@ -388,4 +396,6 @@ ul#bottom ul.dropdown li:hover {
   }
 }
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 490px) {
+
+}
